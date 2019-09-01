@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>animate demo</title>
+  <style>
+  #block1 {
+    background-color:#22e0d7;
+    width: 200px;
+    height: 500px;
+    left: -220px;
+    text-align: center;
+    border: 2px solid green;
+    margin: 3px;
+    font-size: 14px;
+    position: absolute
+  }
+  #block2 {
+    background-color: #22e0d7;
+    width: 50px;
+    height: 1.1em;
+    text-align: center;
+    border: 2px solid green;
+    margin: 3px;
+    font-size: 14px;
+  }
+  #block3 {
+    background-color:#22e0d7;
+    width: 50px;
+    height: 1.1em;
+    text-align: center;
+    border: 2px solid green;
+    margin: 3px;
+    font-size: 14px;
+  }
+  button {
+    font-size: 14px;
+  }
+
+  span.a {
+  display: inline-block; /* the default for span */
+  background-color: yellow; 
+}
+
+  </style>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+ 
+<button id="go1">&raquo; Animate Block1</button>
+<button id="go2">&raquo; Animate Block2</button>
+<button id="go5">&raquo; Animate Block2</button>
+<button id="go3">&raquo; Animate Both</button>
+<button id="go4">&raquo; Reset</button>
+<div id="block1">
+<span id="block2" class="a">Block2</span>
+<span id="block3" class="a">Block3</span>
+</div>
+<div>
+    <span class="a">
+abcd
+    </span>
+    <span class="a">abcd</span>
+</div>
+
+ 
+<script>
+$( "#go1" ).click(function() {
+  $( "#block1" )
+    .animate({
+      width: "90%"
+    }, {
+      queue: false,
+      duration: 1000
+    })
+    .animate({ fontSize: "24px" }, 500 )
+    .css({'background-color': '#313bd0'})
+
+});
+ 
+$( "#go2" ).click(function() {
+  $( "#block2" )
+    .animate({ width: "40%" }, 1500 )
+    .animate({ "background-color": "yellow" }, 1500 )
+    .css({'background-color': 'red'})
+});
+ 
+$( "#go5" ).click(function() {
+  $( "#block3" )
+    .animate({ width: "40%" }, 1000 )
+    .animate({ fontSize: "24px" }, 1000 )
+});
+$( "#go3" ).click(function() {
+  $( "#go1" ).add( "#go2" ).add('#go5').click();
+});
+ 
+$( "#go4" ).click(function() {
+  $( "div" ).css({
+    width: "",
+    fontSize: "",
+    borderWidth: ""
+  });
+});
+$( "#go4" ).click(function() {
+  $( "span" ).css({
+    width: "",
+    fontSize: "",
+    borderWidth: ""
+  });
+});
+</script>
+ 
+</body>
+</html>

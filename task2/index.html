@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <title>ENCRY</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css">
+<script src="https://kit.fontawesome.com/8707e0b323.js"></script>
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body style="height: 110vh">
+                <div class="flex-container2">
+                                <div class='logo'>
+                                 <img src="icon/logo.png" style="height: 18vh">
+                                </div>
+                                <div class='notuse' ></div>
+                                <div class='navtextdiv'>
+                                <span class="navtext">ABOUT US</span>
+                                <span class="navtext">PLATFORM</span> 
+                                <span class="navtext">LAB</span>
+                                <span class="navtext">USE CASES</span>
+                                </div>
+                </div>
+        <div class="flex-container" >
+           <div id="go" class="firstBox" onclick="slideIn('box1')">
+                <span> <i id ='bars' class="fas fa-bars"></i></span>
+                <p class='menu'>MENU</p>
+                </div>
+                 <div class="secondBox">
+                        <p class="text2"> <strong class="text1">ENCRY</strong><br> OPEN-SOURCE <br> BLOCKCHAIN<br> SOLUTIONS</p>
+                 </div>
+                <div class="thirdBox">
+                <img class="img" src="icon/arrow.png" alt="Girl in a jacket">
+           </div>
+        </div>
+        <div id="box1">
+        <div class="flex-container1">
+                        <div id='headbox1' class="headbox1">
+                            <p class="headtext">ABOUT US</p>
+                        </div>
+                        <div class="headbox2">
+                             <p class="headtext">PLATFORM</p>
+                        </div>
+                        <div id='head3' class="headbox3" onclick="slideOut('box1');">
+                             <img class = 'cancelbtn' src="icon/remove.png">
+                        </div>  
+                        <div class="headbox4">
+                                <p class="headtext">LAB</p>
+                        </div>
+                        <div class="headbox5">
+                                <p class="headtext">USE CASES</p>
+                        </div>
+                        <div class="headbox6">
+                                <p class="headtext">COMPANY NEWS</p>
+                        </div> 
+                        <div class="headbox7">
+                                <p class="headtext">SMART CONTRACTS</p>
+                        </div>   
+                        <div class="headbox8">
+                                <p class="headtext">WIKI</p>
+                        </div>   
+                      </div> 
+    </div>
+<script src='app.js'></script>
+</body>
+</html>
